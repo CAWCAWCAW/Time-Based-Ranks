@@ -151,7 +151,8 @@ namespace TimeBasedRanks
                 if (!configContainsGroup)
                     return "0 / 0";
 
-                return TBR.config.Groups.Keys.ToList().IndexOf(group) + " / " + TBR.config.Groups.Keys.Count;
+                return (TBR.config.Groups.Keys.ToList().IndexOf(group) + 1)
+                    + " / " + TBR.config.Groups.Keys.Count;
             }
         }
 
