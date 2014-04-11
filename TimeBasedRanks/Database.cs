@@ -39,7 +39,7 @@ namespace TimeBasedRanks
         public bool insertPlayer(TrPlayer player)
         {
             return _db.Query("INSERT INTO TimeBasedRanking (Name, Time, FirstLogin, LastLogin, Experience)"
-                + " VALUES (@0, @1, @2, @3, @4, @5)", player.name, player.time, player.firstLogin, 
+                + " VALUES (@0, @1, @2, @3, @4)", player.name, player.time, player.firstLogin, 
                 player.lastLogin, player.points) != 0;
         }
 
