@@ -62,7 +62,7 @@ namespace TimeBasedRanks
         {
             player.lastLogin = DateTime.UtcNow.ToString("G");
             return _db.Query("UPDATE TimeBasedRanking SET Time = @0, LastLogin = @1," + 
-                " Experience = @2, WHERE Name = @3",
+                " Experience = @2 WHERE Name = @3",
                 player.time, player.lastLogin, player.points, player.name) != 0;
         }
 
